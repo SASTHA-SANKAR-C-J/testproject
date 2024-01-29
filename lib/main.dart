@@ -21,9 +21,9 @@ class MyApp extends StatelessWidget {
         Get.put(EditStoreProfileController());
       }),
       home: 
-      // HomeScreen()
+      HomeScreen()
       // StampDetailsScreen()
-      EditStoreProfileScreen()
+      // EditStoreProfileScreen()
       ,
     );
   }
