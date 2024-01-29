@@ -4,6 +4,7 @@ class ItemWidget extends StatefulWidget {
   const ItemWidget({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _ItemWidgetState createState() => _ItemWidgetState();
 }
 
@@ -19,7 +20,7 @@ class _ItemWidgetState extends State<ItemWidget> {
         });
       },
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 15,vertical: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 10),
         child: SizedBox(
           child: Stack(
             children: [
@@ -36,7 +37,7 @@ class _ItemWidgetState extends State<ItemWidget> {
               Column(
                 children: [
                   Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       image: DecorationImage(
                         image: AssetImage("assets/images/pic1.png"),
                         fit: BoxFit.fill,
@@ -53,18 +54,24 @@ class _ItemWidgetState extends State<ItemWidget> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
+                        const Text(
                           "介護有料老人ホームひまわり倶楽部の介護職／ヘルパー求人（パート／バイト）",
-                          style: const TextStyle(fontWeight: FontWeight.bold),
+                          style: TextStyle(fontWeight: FontWeight.bold),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Container(
-                              child: Center(
+                              height: 30,
+                              width: 160,
+                              decoration: BoxDecoration(
+                                color: Colors.amber[50],
+                                borderRadius: BorderRadius.circular(5),
+                              ),
+                              child: const Center(
                                 child: Text(
                                   "介護付き有料老人ホーム",
                                   style: TextStyle(
@@ -73,14 +80,8 @@ class _ItemWidgetState extends State<ItemWidget> {
                                   ),
                                 ),
                               ),
-                              height: 30,
-                              width: 160,
-                              decoration: BoxDecoration(
-                                color: Colors.amber[50],
-                                borderRadius: BorderRadius.circular(5),
-                              ),
                             ),
-                            Text(
+                            const Text(
                               "¥ 6,000",
                               style: TextStyle(
                                 fontSize: 20,
@@ -89,25 +90,25 @@ class _ItemWidgetState extends State<ItemWidget> {
                             )
                           ],
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
-                        Text("5月 31日（水）08 : 00 ~ 17 : 00"),
-                        SizedBox(
+                        const Text("5月 31日（水）08 : 00 ~ 17 : 00"),
+                        const SizedBox(
                           height: 10,
                         ),
-                        Text("北海道札幌市東雲町3丁目916番地17号"),
-                        SizedBox(
+                        const Text("北海道札幌市東雲町3丁目916番地17号"),
+                        const SizedBox(
                           height: 10,
                         ),
-                        Text("交通費 300円"),
-                        SizedBox(
+                        const Text("交通費 300円"),
+                        const SizedBox(
                           height: 10,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text(
+                            const Text(
                               "住宅型有料老人ホームひまわり倶楽部",
                               style: TextStyle(color: Colors.grey),
                             ),
@@ -120,7 +121,7 @@ class _ItemWidgetState extends State<ItemWidget> {
                             )
                           ],
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
                       ],
@@ -138,7 +139,7 @@ class _ItemWidgetState extends State<ItemWidget> {
                     color: Colors.red,
                     borderRadius: BorderRadius.circular(5),
                   ),
-                  child: Center(
+                  child: const Center(
                     child: Text(
                       "hello ",
                       style: TextStyle(color: Colors.white),
